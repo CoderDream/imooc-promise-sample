@@ -10,9 +10,8 @@ new Promise(
 
         reject(); // 数据处理出错
     }
-)
-    .then(function A() {
-        // 成功，下一步
-    }, function B() {
-        // 失败，做相应处理
-    });
+).then(function A() {
+    // 成功，下一步
+}, function B() {
+    // 失败，做相应处理
+});

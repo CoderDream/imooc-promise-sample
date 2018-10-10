@@ -2,14 +2,14 @@
 // https://www.imooc.com/video/16620
 
 console.log('here we go');
-new Promise( resolve => {
-    setTimeout( () => {
+new Promise(resolve => {
+    setTimeout(() => {
         throw new Error('bye');
     }, 2000);
-})
-    .then( value => {
-        console.log( value + ' world');
-    })
-    .catch( error => {
-        console.log( 'Error：', error.message);
-    });
+}).then(value => {
+    // 不会执行
+    console.log(value + ' world');
+}).catch(error => {
+    // 抛出错误
+    console.log('Error：', error.message);
+});

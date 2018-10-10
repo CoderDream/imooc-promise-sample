@@ -12,7 +12,7 @@ let promise = new Promise(resolve => {
 });
 
 setTimeout(() => {
-    promise.then( value => {
+    promise.then(value => {
         console.log(value);
     });
 }, 3000);

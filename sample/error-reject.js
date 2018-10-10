@@ -2,13 +2,12 @@
 // https://www.imooc.com/video/16620
 
 console.log('here we go');
-new Promise( (resolve, reject) => {
-    setTimeout( () => {
+new Promise((resolve, reject) => {
+    setTimeout(() => {
         reject('bye');
     }, 2000);
-})
-    .then( value => {
-        console.log( value + ' world');
-    }, value => {
-        console.log( 'Error：', value);
-    });
+}).then(value => {
+    console.log(value + ' world');
+}, value => {
+    console.log('Error：', value);
+});
