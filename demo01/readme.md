@@ -1,3 +1,4 @@
+[ES6 Promise 用法讲解](https://www.cnblogs.com/whybxy/p/7645578.html)
 ## ES6 Promise 用法讲解 ##
 
 Promise是一个构造函数，自己身上有all、reject、resolve这几个眼熟的方法，原型上有then、catch等同样很眼熟的方法。
