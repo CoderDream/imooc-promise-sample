@@ -18,27 +18,15 @@ Promise.all([1, 2, 3])
         });
         let p2 = new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve('I\'m P2');
-            }, 1450);
-        });
-    })
-    .then(all => {
-        console.log('3：', all);
-        let p1 = new Promise(resolve => {
-            setTimeout(() => {
-                resolve('I\'m P1');
-            }, 1500);
-        });
-        let p2 = new Promise((resolve, reject) => {
-            setTimeout(() => {
                 reject('I\'m P2');
-            }, 1000);
+            }, 1450);
         });
         let p3 = new Promise((resolve, reject) => {
             setTimeout(() => {
-                reject('I\'m P3');
+                resolve('I\'m P3');
             }, 3000);
         });
+        return Promise.all([p1, p2, p3]);
     })
     .then(all => {
         console.log('all', all);
