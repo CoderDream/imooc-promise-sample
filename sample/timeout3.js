@@ -9,15 +9,24 @@ new Promise(resolve => {
 }).then(value => {
     console.log(value);
     console.log('everyone');
+    // 立刻执行的匿名函数
     (function () {
         return new Promise(resolve => {
+            // 等待执行，2秒钟后
             setTimeout(() => {
                 console.log('Mr.Laurence');
                 resolve('Merry Xmas');
             }, 2000);
         });
     }());
-    return false;
+    return false; // 如何注释这行，后边打印 undefined world
 }).then(value => {
     console.log(value + ' world');
 });
+
+// console:
+// here we go
+// hello
+// everyone
+// false world
+// Mr.Laurence
